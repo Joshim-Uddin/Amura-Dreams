@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Julius+Sans+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Judson:ital,wght@0,400;0,700;1,400&family=Julius+Sans+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -48,7 +48,47 @@ text-transform: capitalize;
   gap: 20px !important;
   /* margin: 0 40px !important; */
 }
-
+.room{
+  background: url("./assets/room.png") no-repeat top center;
+  background-size: cover;
+  background-origin: border-box;
+ 
+}
+.tab{
+color: #fff;
+text-align: center;
+font-family: "Julius Sans One";
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 100px; /* 250% */
+text-transform: capitalize;
+padding: 0 60px;
+cursor: pointer;
+}
+.tab:hover{
+  border: 2px solid #FFF;
+}
+.active{
+padding: 0 60px;
+border: 2px solid #FFF;
+}
+.title{
+  font-family: "Julius Sans One";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; /* 150% */
+text-transform: capitalize;
+}
+.price{
+  font-family: "Judson", serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px;
+text-transform: capitalize;
+}
 .charm{
   font-family: "Charm", cursive;
   font-weight: 400;
