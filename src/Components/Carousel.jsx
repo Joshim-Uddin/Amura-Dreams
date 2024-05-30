@@ -41,7 +41,21 @@ const Carousel = () => {
         <SwiperSlide>
           <div className='slide relative'>
           <img src={One} alt=""  />
-          <div className='overlay text-center shrink-0 absolute top-0 right-0 left-0 h-full w-full flex flex-col items-center justify-center'>
+          <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
+            <h3 className='text-white text-4xl'>
+            B683 
+            </h3>
+            <p className='text-white text-2xl px-24'>
+            Extrait Marc-Antoine Barrois
+            </p>
+          </div>
+          </div>
+        
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="slide relative">
+          <img src={Two} alt="" />
+          <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
             <h3 className='text-white text-4xl'>
             B683 
             </h3>
@@ -54,8 +68,8 @@ const Carousel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide relative">
-          <img src={Two} alt="" />
-          <div className='overlay text-center shrink-0 absolute top-0 right-0 left-0 h-full w-full flex flex-col items-center justify-center'>
+          <img src={Three} alt="" />
+          <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
             <h3 className='text-white text-4xl'>
             B683 
             </h3>
@@ -67,23 +81,78 @@ const Carousel = () => {
         
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide">
-          <img src={Three} alt="" />
-          </div>
-        
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide">
+          <div className="slide relative">
           <img src={Four} alt="" />
+          <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
+            <h3 className='text-white text-4xl'>
+            B683 
+            </h3>
+            <p className='text-white text-2xl px-24 mt-8'>
+            Extrait Marc-Antoine Barrois
+            </p>
+          </div>
+          </div>
+        
+        </SwiperSlide>
+
+        {/* This is just copy of upper elements */}
+        <SwiperSlide>
+          <div className='slide relative'>
+          <img src={One} alt=""  />
+          <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
+            <h3 className='text-white text-4xl'>
+            B683 
+            </h3>
+            <p className='text-white text-2xl px-24'>
+            Extrait Marc-Antoine Barrois
+            </p>
+          </div>
           </div>
         
         </SwiperSlide>
         <SwiperSlide>
-        <img src={One} alt="" />
+          <div className="slide relative">
+          <img src={Two} alt="" />
+          <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
+            <h3 className='text-white text-4xl'>
+            B683 
+            </h3>
+            <p className='text-white text-2xl px-24 mt-8'>
+            Extrait Marc-Antoine Barrois
+            </p>
+          </div>
+          </div>
+        
         </SwiperSlide>
         <SwiperSlide>
-        <img src={One} alt="" />
+          <div className="slide relative">
+          <img src={Three} alt="" />
+          <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
+            <h3 className='text-white text-4xl'>
+            B683 
+            </h3>
+            <p className='text-white text-2xl px-24 mt-8'>
+            Extrait Marc-Antoine Barrois
+            </p>
+          </div>
+          </div>
+        
         </SwiperSlide>
+        <SwiperSlide>
+          <div className="slide relative">
+          <img src={Four} alt="" />
+          <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
+            <h3 className='text-white text-4xl'>
+            B683 
+            </h3>
+            <p className='text-white text-2xl px-24 mt-8'>
+            Extrait Marc-Antoine Barrois
+            </p>
+          </div>
+          </div>
+        
+        </SwiperSlide>
+       
         
       </Swiper>
     </>

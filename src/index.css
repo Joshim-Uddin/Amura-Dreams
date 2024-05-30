@@ -45,20 +45,10 @@ text-transform: capitalize;
   font-weight: bold;
 }
 .swiper-wrapper{
-  gap: 50px !important;
-  margin: 0 40px !important;
+  gap: 20px !important;
+  /* margin: 0 40px !important; */
 }
-.overlay{
-  display: none;
-}
-.slide:hover .overlay{
-  display: flex;
-  background: rgba(0,0,0,0.4);
-  transition-timing-function: ease-out;
-  transition: 8s;
-  /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
 
-}
 .charm{
   font-family: "Charm", cursive;
   font-weight: 400;
