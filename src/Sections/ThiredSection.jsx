@@ -18,6 +18,13 @@ const ThiredSection = () => {
     
     // This is a placeholder products array which should be dynamically updated from server data
     const products = [{image: "/src/assets/purexs.png", title:"Pure XS", des:"Paco Rabanne", price:"$500", type:"Alta Gama"}, {image:"/src/assets/marly.png", title:"Layton", des:"Parfums de Marly", price:"$330", type:"Alta Gama"}, {image:"/src/assets/roja.png", title:"Vetiver Parfum Cologne", des:"Roja Dove", price:"$260", type:"Alta Gama"},{image:"/src/assets/gio.png", title:"Acqua di Giò Parfum", des:"Giorgio Armani", price:"$540", type:"Alta Gama"},{image: "/src/assets/purexs.png", title:"Pure XS", des:"Paco Rabanne", price:"$500", type:"Alta Gama"}, {image:"/src/assets/marly.png", title:"Layton", des:"Parfums de Marly", price:"$330", type:"Diseñador"}, {image:"/src/assets/roja.png", title:"Vetiver Parfum Cologne", des:"Roja Dove", price:"$260", type:"Diseñador"},{image: "/src/assets/purexs.png", title:"Pure XS", des:"Paco Rabanne", price:"$500", type:"Diseñador"},{image:"/src/assets/gio.png", title:"Acqua di Giò Parfum", des:"Giorgio Armani", price:"$540", type:"Diseñador"},{image:"/src/assets/gio.png", title:"Acqua di Giò Parfum", des:"Giorgio Armani", price:"$540", type:"Árabes"},{image:"/src/assets/marly.png", title:"Layton", des:"Parfums de Marly", price:"$330", type:"Árabes"}, {image: "/src/assets/purexs.png", title:"Pure XS", des:"Paco Rabanne", price:"$500", type:"Árabes"},{image:"/src/assets/roja.png", title:"Vetiver Parfum Cologne", des:"Roja Dove", price:"$260", type:"Árabes"}]
+    
+
+    // Filter products by their type or category
+    const altaGama= products.filter((product)=>product.type=="Alta Gama")
+    const disenador = products.filter((product)=>product.type=="Diseñador")
+    const arabes = products.filter((product)=>product.type=="Árabes")
+
     return (
         <div className='px-11'>
             <div className='room pb-20'>
@@ -29,19 +36,19 @@ const ThiredSection = () => {
             <div className='h-16'></div>
             <div className='py-28'> 
             <div className='flex justify-between px-11 pb-16'>
-          <button onClick={()=>setNum(num - 1)}><img src={leftArrow} alt="" /></button>
-          <button onClick={()=>setNum(num + 1)}> <img src={rightArrow} alt="" /></button>
+          <button onClick={()=>setNum(num - 1)} disabled={(4+num) <=4 ?true:false}><img src={leftArrow} alt="" /></button>
+          <button onClick={()=>setNum(num + 1)} disabled={(activeTab=== "Alta Gama" && altaGama.length<= (4+num))|| (activeTab=== "Diseñador" && disenador.length<= (4+num)) || (activeTab=== "Árabes" && arabes.length<= (4+num)) ?true:false}> <img src={rightArrow} alt="" /></button>
           </div>
            <div className="cards px-28 flex gap-8">
           
            {/* Products for Alta Gama Tab */}
-            {activeTab==="Alta Gama" && products.filter((product)=>product.type=="Alta Gama").slice(num, (4 + num)).map((product, index) =><Card key={index} image={product.image} title={product.title} des={product.des} price={product.price} />)}
+            {activeTab==="Alta Gama" && altaGama.slice(num, (4 + num)).map((product, index) =><Card key={index} image={product.image} title={product.title} des={product.des} price={product.price} />)}
             
             {/* Products for Disenador Tab */}
-            {activeTab==="Diseñador" && products.filter((product)=>product.type=="Diseñador").map((product, index) =><Card key={index} image={product.image} title={product.title} des={product.des} price={product.price} />)}
+            {activeTab==="Diseñador" && disenador.slice(num, (4+num)).map((product, index) =><Card key={index} image={product.image} title={product.title} des={product.des} price={product.price} />)}
             
             {/* Products for Arabes Tab */}
-            {activeTab==="Árabes" && products.filter((product)=>product.type=="Árabes").map((product, index) =><Card key={index} image={product.image} title={product.title} des={product.des} price={product.price} />)}
+            {activeTab==="Árabes" && arabes.slice(num, (4 + num)).map((product, index) =><Card key={index} image={product.image} title={product.title} des={product.des} price={product.price} />)}
            
            
            </div>

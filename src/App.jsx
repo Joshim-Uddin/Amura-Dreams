@@ -4,6 +4,7 @@ import Hero from './Components/Hero';
 import FirstSection from './Sections/FirstSection';
 import SecondSection from './Sections/SecondSection';
 import ThiredSection from './Sections/ThiredSection';
+import FourthSection from './Sections/FourthSection';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
     <Hero />
     <FirstSection />
     <SecondSection />
+    <FourthSection />
     </>
   );
 };
