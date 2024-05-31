@@ -4,6 +4,7 @@ import App from '../App';
 import ErrorElement from '../ErrorElement';
 import Home from '../Pages/Home';
 import Collection from '../Pages/Collection';
+import Products from '../Pages/Products';
 
 const router = createBrowserRouter([
     {
@@ -18,7 +19,14 @@ const router = createBrowserRouter([
             {
                 path:"/colección",
                 element: <Collection />
-            }
+            },
+            {
+                path: "/products/:id",
+                element: (
+                    <Products />
+                )
+                
+              },
         ]
     }
 ])
