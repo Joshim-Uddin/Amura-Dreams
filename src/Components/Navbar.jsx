@@ -2,6 +2,7 @@ import React from 'react';
 import logo from "../assets/logo.png"
 import search from "../assets/search.png"
 import sale from "../assets/sale.png"
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -27,7 +28,7 @@ const Navbar = () => {
                     <a href="" className='uppercase navlink'>regalar</a>
                     </li>
                     <li className='px-10 pb-8'>
-                    <a href="/colección" className='uppercase navlink'> colección amura</a>
+                    <Link to="/colección" className='uppercase navlink'> colección amura</Link>
                     </li>
                     <li className='px-10 pb-8'>
                     <a href="" className='uppercase navlink'>boutique</a>
