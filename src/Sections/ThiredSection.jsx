@@ -6,18 +6,16 @@ import rightArrow from "./../assets/right-arrow.png";
 const ThiredSection = () => {
     const [activeTab, setActiveTab] = useState("Alta Gama")
     const [num, setNum] = useState(0)
-
     const handleTabAcitve=(e)=>{
        const activeTab = document.querySelector(".active")
        if(activeTab){
         activeTab.classList.remove("active")
        }
        e.target.classList.add("active")
+       setNum(0)
        setActiveTab(e.target.innerText)
     }
     
-
-
 
     
     // This is a placeholder products array which should be dynamically updated from server data
