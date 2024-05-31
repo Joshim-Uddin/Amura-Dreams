@@ -27,7 +27,7 @@ const Navbar = () => {
                     <a href="" className='uppercase navlink'>regalar</a>
                     </li>
                     <li className='px-10 pb-8'>
-                    <a href="" className='uppercase navlink'> colección amura</a>
+                    <a href="/colección" className='uppercase navlink'> colección amura</a>
                     </li>
                     <li className='px-10 pb-8'>
                     <a href="" className='uppercase navlink'>boutique</a>

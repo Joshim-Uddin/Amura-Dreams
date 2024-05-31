@@ -5,7 +5,7 @@ import Button from '../Components/Button';
 const FourthSection = () => {
     return (
         <div className='relative'>
-            <img src={flora} alt="flora image" />
+            <img src={flora} alt="flora image" className='w-full'/>
             <div className='absolute top-0 right-40 flex flex-col justify-center items-center gap-6'>
                 <img src={logo} alt="" className='max-w-[244px]'/>
                 <h2 className='text-6xl text-center text-white capitalize font-medium'>Asesoría Amura</h2>

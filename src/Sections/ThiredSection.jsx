@@ -39,7 +39,7 @@ const ThiredSection = () => {
           <button onClick={()=>setNum(num - 1)} disabled={(4+num) <=4 ?true:false}><img src={leftArrow} alt="" /></button>
           <button onClick={()=>setNum(num + 1)} disabled={(activeTab=== "Alta Gama" && altaGama.length<= (4+num))|| (activeTab=== "Diseñador" && disenador.length<= (4+num)) || (activeTab=== "Árabes" && arabes.length<= (4+num)) ?true:false}> <img src={rightArrow} alt="" /></button>
           </div>
-           <div className="cards px-28 flex gap-8">
+           <div className="cards 2xl:px-28 px-12 flex shrink-0 2xl:gap-8 md:gap-4">
           
            {/* Products for Alta Gama Tab */}
             {activeTab==="Alta Gama" && altaGama.slice(num, (4 + num)).map((product, index) =><Card key={index} image={product.image} title={product.title} des={product.des} price={product.price} />)}
