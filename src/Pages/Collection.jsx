@@ -30,7 +30,7 @@ const Collection = () => {
     return (
         <div>
             <div>
-                <img src={heroImage} alt="" />
+                <img src={heroImage} alt="" className='w-full'/>
             </div>
             <div className="products px-32">
                 <div className='flex justify-between pt-28'>
