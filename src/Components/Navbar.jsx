@@ -61,7 +61,7 @@ const Navbar = () => {
                 </div>
                     </div>
                     </div>
-                <div className={toggle?"hamburger absolute top-0":"hamburger absolute top-0 hidden"}>
+                <div className={toggle?"hamburger absolute top-0 z-30":"hamburger absolute top-0 hidden"}>
                     <div className='flex flex-col justify-center items-center pb-20'>
                     <Link to="/"><img src={simbolo} alt="" /></Link>
                     </div>

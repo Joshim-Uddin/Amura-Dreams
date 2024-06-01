@@ -22,8 +22,8 @@ const Carousel = () => {
         spaceBetween={50}
         navigation={true}
         breakpoints={{
-          640: {
-            slidesPerView: 2,
+          600: {
+            slidesPerView: 1,
             spaceBetween: 10,
           },
           768: {
@@ -39,8 +39,8 @@ const Carousel = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className='slide relative'>
-          <img src={One} alt=""  />
+          <div className='slide relative h-[580px]'>
+          <img src={One} alt=""  className='max-h-[580px]'/>
           <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
             <h3 className='text-white text-4xl'>
             B683 
@@ -53,8 +53,8 @@ const Carousel = () => {
         
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide relative">
-          <img src={Two} alt="" />
+          <div className="slide relative h-[580px]">
+          <img src={Two} alt="" className='max-h-[580px]'/>
           <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
             <h3 className='text-white text-4xl'>
             B683 
@@ -67,8 +67,8 @@ const Carousel = () => {
         
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide relative">
-          <img src={Three} alt="" />
+          <div className="slide relative h-[580px]">
+          <img src={Three} alt="" className='max-h-[580px]'/>
           <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
             <h3 className='text-white text-4xl'>
             B683 
@@ -81,8 +81,8 @@ const Carousel = () => {
         
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide relative">
-          <img src={Four} alt="" />
+          <div className="slide relative h-[580px]">
+          <img src={Four} alt="" className='max-h-[580px]'/>
           <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
             <h3 className='text-white text-4xl'>
             B683 
@@ -97,8 +97,8 @@ const Carousel = () => {
 
         {/* This is just copy of upper elements */}
         <SwiperSlide>
-          <div className='slide relative'>
-          <img src={One} alt=""  />
+          <div className='slide relative h-[580px]'>
+          <img src={One} alt=""  className='max-h-[580px]'/>
           <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
             <h3 className='text-white text-4xl'>
             B683 
@@ -111,7 +111,7 @@ const Carousel = () => {
         
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide relative">
+          <div className="slide relative h-[580px]">
           <img src={Two} alt="" />
           <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
             <h3 className='text-white text-4xl'>
@@ -125,7 +125,7 @@ const Carousel = () => {
         
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide relative">
+          <div className="slide relative h-[580px]">
           <img src={Three} alt="" />
           <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
             <h3 className='text-white text-4xl'>
@@ -139,7 +139,7 @@ const Carousel = () => {
         
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide relative">
+          <div className="slide relative h-[580px]">
           <img src={Four} alt="" />
           <div className='text-center shrink-0 absolute transition-transform ease-linear duration-300 top-0 inset-0 flex flex-col items-center justify-center gap-8 bg-black opacity-0 hover:opacity-70'>
             <h3 className='text-white text-4xl'>

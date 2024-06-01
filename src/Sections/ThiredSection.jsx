@@ -1,10 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+
+
+// import required modules
+import { Navigation } from 'swiper/modules';
 import Card from '../Components/Card';
-import leftArrow from "./../assets/left-arrow.png";
-import rightArrow from "./../assets/right-arrow.png";
 
 const ThiredSection = () => {
     const [activeTab, setActiveTab] = useState("Alta Gama")
+    const [screenSize, setScreenSize] = useState({
+        width: window.innerWidth
+      })
     const [num, setNum] = useState(0)
     const handleTabAcitve=(e)=>{
        const activeTab = document.querySelector(".active")
@@ -27,32 +39,70 @@ const ThiredSection = () => {
     const disenador = products.filter((product)=>product.type=="Diseñador")
     const arabes = products.filter((product)=>product.type=="Árabes")
 
+    useEffect(()=>{
+        const handleResize = () => {
+            setScreenSize({
+              width: window.innerWidth
+            });
+          };
+      
+          // Add event listener for window resize
+          window.addEventListener('resize', handleResize);
+          if(screenSize.width>600){
+            document.getElementsByClassName("swiper-button-next")[1].classList.add("top")
+            document.getElementsByClassName("swiper-button-prev")[1].classList.add("top")
+         }else{
+            document.getElementsByClassName("swiper-button-next")[1].classList.remove("top")
+            document.getElementsByClassName("swiper-button-prev")[1].classList.remove("top")
+         }
+          // Clean up the event listener on component unmount
+          return () => {
+            window.removeEventListener('resize', handleResize);
+          };
+    },
+        
+     [screenSize.width])
+     console.log(screenSize.width)
+    
+    
     return (
-        <div className='px-11'>
+        <div className='md:px-11 px-2'>
             <div className='room pb-20'>
-            <div className='flex justify-center bg-[rgba(0,0,0,0.4)] gap-14 py-3'>
+            <div className='flex justify-center bg-[rgba(0,0,0,0.4)] md:gap-14 gap-2 md:py-3'>
                 <div className="tab" onClick={handleTabAcitve} >Diseñador</div>
-                <div className="tab px-16 active" onClick={handleTabAcitve}>Alta Gama</div>
+                <div className="tab md:px-16 px-2 active" onClick={handleTabAcitve}>Alta Gama</div>
                 <div className="tab" onClick={handleTabAcitve}>Árabes</div>
             </div>
             <div className='h-16'></div>
-            <div className='py-28'> 
-            <div className='flex justify-between px-11 pb-16'>
-          <button onClick={()=>setNum(num - 1)} disabled={(4+num) <=4 ?true:false}><img src={leftArrow} alt="" /></button>
-          <button onClick={()=>setNum(num + 1)} disabled={(activeTab=== "Alta Gama" && altaGama.length<= (4+num))|| (activeTab=== "Diseñador" && disenador.length<= (4+num)) || (activeTab=== "Árabes" && arabes.length<= (4+num)) ?true:false}> <img src={rightArrow} alt="" /></button>
-          </div>
+            <div className='md:py-28'> 
            <div className="cards 2xl:px-28 px-12 flex shrink-0 2xl:gap-8 md:gap-4">
-          
-           {/* Products for Alta Gama Tab */}
-            {activeTab==="Alta Gama" && altaGama.slice(num, (4 + num)).map((product, index) =><Card key={index} image={product.image} title={product.title} des={product.des} price={product.price} />)}
-            
-            {/* Products for Disenador Tab */}
-            {activeTab==="Diseñador" && disenador.slice(num, (4+num)).map((product, index) =><Card key={index} image={product.image} title={product.title} des={product.des} price={product.price} />)}
-            
-            {/* Products for Arabes Tab */}
-            {activeTab==="Árabes" && arabes.slice(num, (4 + num)).map((product, index) =><Card key={index} image={product.image} title={product.title} des={product.des} price={product.price} />)}
-           
-           
+           <>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={10}
+        navigation={true}
+        breakpoints={{
+          600: {
+            slidesPerView: 1
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        }}
+        modules={[Navigation]}
+        className="mySwiper pt-20"
+      >
+        {activeTab==="Alta Gama" && altaGama.map((product, index) => <SwiperSlide key={index}><Card key={index} image={product.image} title={product.title} des={product.des} price={product.price} /></SwiperSlide>)}
+        {activeTab==="Diseñador" && disenador.map((product, index) => <SwiperSlide key={index}><Card key={index} image={product.image} title={product.title} des={product.des} price={product.price} /></SwiperSlide>)}
+        {activeTab==="Árabes" && arabes.map((product, index) => <SwiperSlide key={index}><Card key={index} image={product.image} title={product.title} des={product.des} price={product.price} /></SwiperSlide>)}
+        
+      </Swiper>
+    </>      
            </div>
             </div>
         </div>
@@ -61,3 +111,8 @@ const ThiredSection = () => {
 };
 
 export default ThiredSection;
+
+
+
+
+    

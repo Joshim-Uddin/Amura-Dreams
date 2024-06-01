@@ -11,9 +11,9 @@ const Home = () => {
         <>
     <Hero />
     <FirstSection />
-    {/* <SecondSection />
+    <SecondSection />
     <FourthSection />
-    <Boutiques /> */}
+    <Boutiques />
         </>
     );
 };
