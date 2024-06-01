@@ -225,6 +225,10 @@ text-transform: capitalize;
     .menus{
       order: 3;
     }
+    .pagination, .check{
+      font-size: 1.25rem;
+    }
+    
 }
 
   
