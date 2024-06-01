@@ -24,35 +24,35 @@ const Products = () => {
     
     return (
         <div className='details pb-24'>
-        <div className='flex gap-14 text-white pt-[5rem] pb-[9rem] ps-[6rem] pr-[8rem]'>
+        <div className='flex md:flex-row flex-col gap-14 text-white pt-[5rem] md:pb-[9rem] md:ps-[6rem] md:pr-[8rem] px-8'>
 
-            <div className='flex gap-4'>
-            <div className='flex flex-col justify-evenly'>
-                {singleItem?.related_images.map((image, index)=> <div key={index}><img src={image} alt="" className='w-40 h-40'/></div>)}
+            <div className='flex md:flex-row flex-col-reverse gap-4'>
+            <div className='flex flex-row md:flex-col md:justify-evenly'>
+                {singleItem?.related_images.map((image, index)=> <div key={index}><img src={image} alt="" className='md:w-40 md:h-40 w-20 h-20'/></div>)}
             </div>
             <img src={image} alt="" className='max-w-[640px] max-h-[675px]'/>
             </div>
-            <div className='w-[50%] flex flex-col gap-6 items-start'>
-            <h2 className='text-3xl font-bold capitalize'>{singleItem?.name}</h2>
-            <p className='text-xl tracking-[0.4px]'>{singleItem?.description}</p>
-            <p className='text-2xl capitalize'>{singleItem?.price}</p>
+            <div className='md:w-[50%] flex flex-col gap-6 items-start'>
+            <h2 className='md:text-3xl text-xl font-bold capitalize'>{singleItem?.name}</h2>
+            <p className='md:text-xl text-xs tracking-[0.4px]'>{singleItem?.description}</p>
+            <p className='md:text-2xl text-lg capitalize'>{singleItem?.price}</p>
             <div>
-            <select name="size" id="size" className='bg-transparent outline outline-2 outline-white p-5 text-base'>
-                {singleItem?.sizes.map((size, index)=><option key={index} value={size} className='bg-blue-500 text-base'>{size} ML</option>)}
+            <select name="size" id="size" className='bg-transparent outline outline-2 outline-white md:p-5 p-2 md:text-base text-xs'>
+                {singleItem?.sizes.map((size, index)=><option key={index} value={size} className='bg-blue-500 md:text-base text-xs'>{size} ML</option>)}
             </select>
-            <button className='text-lg capitalize outline outline-2 outline-white py-4 px-12 ms-3'>Agregar al carrito</button>
+            <button className='md:text-lg text-xs capitalize outline outline-2 outline-white md:py-4 py-2 md:px-12 px-4 ms-3'>Agregar al carrito</button>
             </div>
             <img src={line} alt="" className='py-5'/>
             <div>
-                <h5 className='text-xl font-bold capitalize mb-3'>Notas principales:</h5>
+                <h5 className='md:text-xl text-xs font-bold capitalize mb-3'>Notas principales:</h5>
                 <div className='flex'>
-                    {singleItem?.principles.map((principle, index)=> <img src={principle} alt="" key={index} />)}
+                    {singleItem?.principles.map((principle, index)=> <img src={principle} alt="" key={index} className='w-12 h-12' />)}
                 </div>
             </div>
             <div>
-                <h5 className='text-xl font-bold capitalize mb-3'>Acordes:</h5>
+                <h5 className='md:text-xl text-xs font-bold capitalize mb-3'>Acordes:</h5>
                 <div>
-                    {singleItem?.cords.map((cord, index)=> <button key={index} className='text-xl charm capitalize py-4 px-16 outline outline-2 outline-white'>{cord}</button>)}
+                    {singleItem?.cords.map((cord, index)=> <button key={index} className='cord md:text-xl text-xs charm capitalize py-4 px-16 outline outline-2 outline-white'>{cord}</button>)}
                 </div>
             </div>
             </div>
