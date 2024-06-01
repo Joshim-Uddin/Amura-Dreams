@@ -62,8 +62,7 @@ const ThiredSection = () => {
     },
         
      [screenSize.width])
-     console.log(screenSize.width)
-    
+        
     
     return (
         <div className='md:px-11 px-2'>

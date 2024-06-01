@@ -17,7 +17,7 @@ const Boutiques = () => {
                 <div className='relative'><img src={momentum} alt="" className='h-[511px]'/><span className='text-3xl text-white font-semibold text-center capitalize absolute bottom-10 left-1/3'>Momentum</span></div>
                 <div className='relative'><img src={escazu} alt="" className='h-[511px]'/><span className='text-3xl text-white font-semibold text-center capitalize absolute bottom-10 left-1/3'>Escazú</span></div>
             </div>
-            <div className='relative flex justify-center items-center pb-20'><img src={labmobile} alt="" className='h-[285px]'/><span className='md:text-3xl text-2xl text-white font-semibold text-center capitalize absolute md:bottom-10 md:left-1/3 bottom-28'>Curridabat</span></div>
+            <div className='relative flex justify-center items-center pb-20 min-[600px]:hidden'><img src={labmobile} alt="" className='h-[285px]'/><span className='md:text-3xl text-2xl text-white font-semibold text-center capitalize absolute md:bottom-10 md:left-1/3 bottom-28'>Curridabat</span></div>
             
         </section>
     );
