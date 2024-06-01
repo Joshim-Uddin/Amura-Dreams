@@ -15,7 +15,7 @@ const Collection = () => {
     // This array of products is used to demonstrate only this will load dynamically from server
     const products = [{image:"https://i.ibb.co/PQWMn9f/1.png", category:"Femenino"}, {image:"https://i.ibb.co/rbRw6Sv/2.png",category:"Femenino"},
     {image:"https://i.ibb.co/48bDfw6/3.png", category:"Femenino"},
-    {image:"https://i.ibb.co/yfshF5k/4.png", category:"Femenino"},
+    {image:"https://i.ibb.co/cJsgjWY/Disen-o.png", category:"Maculino"},
     {image:"https://i.ibb.co/KDqhR15/5.png",category:"Femenino"},
     {image:"https://i.ibb.co/Z67YPQ6/6.png", category:"Femenino"},
     {image: "https://i.ibb.co/HTd0rhb/7.png", category:"Femenino"},
