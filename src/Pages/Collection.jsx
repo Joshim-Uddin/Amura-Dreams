@@ -68,6 +68,10 @@ const handleFilter=(e)=>{
 
 }
 
+const handleCheck=(e) => {
+    e.preventDefault();
+    console.log(e.target.value)
+}
 
     return (
         <div>
@@ -87,7 +91,7 @@ const handleFilter=(e)=>{
                     <div>
                         <h3 className='md:text-4xl text-lg mb-5 capitalize'>Colecciones</h3>
                         <div className="check">
-                        <input type="checkbox" name="Femenino" id="Femenino" onClick={handleFilter}/><label htmlFor="Femenino">Femenino</label>
+                        <input type="checkbox" name="Femenino" id="Femenino" value="Femenino" onChange={handleCheck} onClick={handleFilter}/><label htmlFor="Femenino">Femenino</label>
                         </div>
                         <div className="check">
                         <input type="checkbox" name="Maculino" id="Maculino" onClick={handleFilter}/>

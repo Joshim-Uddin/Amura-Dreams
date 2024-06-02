@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer className='footer'>
            <div className='footerItems md:px-28 px-4 md:py-12 py-4'>
-           <div className='menus flex items-center justify-center md:gap-16 gap-8 md:mt-0 mt-14'>
+           <div className='menus flex justify-center md:gap-16 gap-8 md:mt-0 mt-14'>
                 <div className='md:text-lg text-[10px]'>
                 <h5 className='mb-6'>AROMAS</h5> 
                 <ul className='flex flex-col gap-2'>
