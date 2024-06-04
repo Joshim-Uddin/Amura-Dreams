@@ -240,5 +240,18 @@ text-transform: capitalize;
       padding: 10px 40px;
     }
 }
-
+@media screen and (min-width: 768px) and (max-width:1440px){
+  .details p, select, button{
+    font-size: 1rem !important;
+  }
+  .description{
+    width: 45% !important;
+  }
+  .main{
+    width: 640px;
+  }
+  .side{
+    height: 140px !important;
+  }
+}
   
