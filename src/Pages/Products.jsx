@@ -27,7 +27,7 @@ const Products = () => {
         <div className='details-container flex md:flex-row flex-col text-white'>
 
             <div className='flex md:flex-row flex-col-reverse gap-4 md:max-h-[575px] 2xl:max-h-[675px]'>
-            <div className='flex flex-row md:flex-col md:justify-between'>
+            <div className='flex flex-row md:flex-col justify-between'>
                 {singleItem?.related_images.map((image, index)=> <img src={image} alt="" key={index} className='side md:w-40 md:h-40 w-20 h-20'/>)}
             </div>
            <div className='main'>
@@ -53,7 +53,7 @@ const Products = () => {
             </div>
             <div>
                 <h5 className='md:text-xl text-xs font-bold capitalize mb-3'>Acordes:</h5>
-                <div>
+                <div className='cords'>
                     {singleItem?.cords.map((cord, index)=> <button key={index} className='cord md:text-xl text-xs charm capitalize py-4 px-16 outline outline-2 outline-white'>{cord}</button>)}
                 </div>
             </div>

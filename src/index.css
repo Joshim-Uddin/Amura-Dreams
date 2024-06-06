@@ -191,6 +191,12 @@ text-transform: capitalize;
 .main{
   max-width: 640px;
 }
+@media screen and (max-width:320px){
+  .side{
+    width: 64px !important;
+    height: 64px !important;
+  }
+}
 @media screen and (max-width: 600px){
   .cta{
     font-size: 10px;
@@ -241,6 +247,11 @@ text-transform: capitalize;
     .pagination, .check{
       font-size: 1.25rem;
     }
+    .cords{
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
     .cord:nth-child(1){
       padding: 10px 80px;
       margin-bottom: 10px;
@@ -255,6 +266,10 @@ text-transform: capitalize;
     .product-container{
       column-gap: 1.75rem !important;
     }
+    .details-container {
+      padding: 5rem 1rem 9rem;
+      gap: 3.5rem !important;
+  }
     
 }
 @media screen and (min-width: 768px) and (max-width:1080px){
