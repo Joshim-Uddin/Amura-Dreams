@@ -178,6 +178,17 @@ text-transform: capitalize;
   justify-content: space-around;
   flex-direction: row;
 }
+.details-container{
+  padding: 5rem 7rem 9rem;
+  gap: 3.5rem !important;
+  /* pt-[5rem] md:pb-[9rem] md:ps-[6rem] md:pr-[8rem] ps-8 pr-8 */
+}
+.product-container{
+  column-gap: 6rem !important;
+}
+.main{
+  max-width: 640px;
+}
 @media screen and (max-width: 600px){
   .cta{
     font-size: 10px;
@@ -239,19 +250,87 @@ text-transform: capitalize;
     .cord:nth-child(3){
       padding: 10px 40px;
     }
+    .product-container{
+      column-gap: 1.75rem !important;
+    }
+    
 }
-@media screen and (min-width: 768px) and (max-width:1440px){
+@media screen and (min-width: 768px) and (max-width:1080px){
+  .collection{
+    max-width: 340px !important;
+  }
+  .product-container{
+    column-gap: 4rem !important;
+  }
+  .details-container{
+    padding: 5rem 2.5rem 9rem !important;
+    gap: 1.5rem !important;
+  }
+  
+}
+@media screen and (min-width: 768px) and (max-width:1280px){
+  .details-container{
+    padding: 5rem 4rem 7rem;
+  }
   .details p, select, button{
     font-size: 1rem !important;
   }
-  .description{
-    width: 45% !important;
+  .product-container{
+    column-gap: 4rem !important;
   }
+  
   .main{
-    width: 640px;
+    max-width: 380px !important;
+    max-height: 575px !important;
+  }
+  .side{
+    height: 120px !important;
+    width: 120px !important;
+  }
+
+  .collection{
+    max-width: 478px !important;
+  }
+}
+@media screen and (min-width: 1395px) and (max-width:1536px){
+  .details p, select, button{
+    font-size: 1rem !important;
+  }
+  .product-container{
+    column-gap: 5rem !important;
+  }
+  .collection{
+    max-width: 478px !important;
+  }
+  
+  .main{
+    max-width: 440px !important;
+    max-height: 675px !important;
   }
   .side{
     height: 140px !important;
+    width: 140px !important;
+  }
+  
+}
+/* @media screen and (min-width: 1920px){
+  .main{
+    min-width: 640px !important;
+  }
+} */
+@media screen and (min-width: 1920px){
+  .main{
+    min-width: 640px !important;
+  }
+  .details-container{
+    width: 100vw;
+    margin: 0 auto;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 5rem 10rem 9rem;
+    gap: 3.5rem !important;
+    /* pt-[5rem] md:pb-[9rem] md:ps-[6rem] md:pr-[8rem] ps-8 pr-8 */
   }
 }
+
   
