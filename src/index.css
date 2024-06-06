@@ -47,7 +47,9 @@ text-transform: capitalize;
   color: white !important;
   font-weight: bold;
 }
-
+li a:hover{
+  color: #fb06ff;
+}
 .top{
   top: 30px !important;
 }
