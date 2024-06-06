@@ -323,7 +323,6 @@ text-transform: capitalize;
     min-width: 640px !important;
   }
   .details-container{
-    width: 100vw;
     margin: 0 auto;
     justify-content: center !important;
     align-items: center !important;
