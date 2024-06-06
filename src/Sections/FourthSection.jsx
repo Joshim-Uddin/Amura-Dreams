@@ -12,8 +12,8 @@ const FourthSection = () => {
                 <img src={logo} alt="" className='md:max-w-[244px] max-w-[104px]'/>
                 <h2 className='md:text-6xl text-3xl text-center text-white capitalize font-medium'>Asesoría Amura</h2>
                 <p className='contact-para md:w-3/5 w-11/12'>Encontramos el perfume perfecto para vos</p>
-                <div className='bg-[#3C0C0C] md:px-8'>
-                <Button text="Consultar" />
+                <div className='bg-[#3C0C0C] md:px-8 hover:bg-white'>
+                <Button text="Consultar"/>
                 </div>
             </div>
         </div>
