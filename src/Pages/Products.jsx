@@ -24,15 +24,17 @@ const Products = () => {
     
     return (
         <div className='details pb-24'>
-        <div className='flex md:flex-row flex-col gap-14 text-white pt-[5rem] md:pb-[9rem] md:ps-[6rem] md:pr-[8rem] px-8'>
+        <div className='details-container flex md:flex-row flex-col text-white'>
 
-            <div className='flex md:flex-row flex-col-reverse gap-4 max-h-[675px]'>
-            <div className='flex flex-row md:flex-col md:justify-evenly'>
-                {singleItem?.related_images.map((image, index)=> <div key={index}><img src={image} alt="" className='side md:w-40 md:h-40 w-20 h-20'/></div>)}
+            <div className='flex md:flex-row flex-col-reverse gap-4 md:max-h-[575px] 2xl:max-h-[675px]'>
+            <div className='flex flex-row md:flex-col md:justify-between'>
+                {singleItem?.related_images.map((image, index)=> <img src={image} alt="" key={index} className='side md:w-40 md:h-40 w-20 h-20'/>)}
             </div>
-            <img src={image} alt="" className='main max-w-[640px] max-h-[675px]'/>
+           <div className='main'>
+           <img src={image} alt="" className='w-full h-full'/>
+           </div>
             </div>
-            <div className='description md:w-[50%] flex flex-col gap-6 items-start'>
+            <div className='description md:w-[45%] flex flex-col gap-6 items-start'>
             <h2 className='md:text-3xl text-xl font-bold capitalize'>{singleItem?.name}</h2>
             <p className='md:text-xl text-xs tracking-[0.4px]'>{singleItem?.description}</p>
             <p className='md:text-2xl text-lg capitalize'>{singleItem?.price}</p>
@@ -40,7 +42,7 @@ const Products = () => {
             <select name="size" id="size" className='bg-transparent outline outline-2 outline-white md:p-5 p-2 md:text-base text-xs'>
                 {singleItem?.sizes.map((size, index)=><option key={index} value={size} className='bg-blue-500 md:text-base text-xs'>{size} ML</option>)}
             </select>
-            <button className='md:text-lg text-xs capitalize outline outline-2 outline-white md:py-4 py-2 md:px-12 px-4 ms-3'>Agregar al carrito</button>
+            <button className='md:text-lg text-xs capitalize outline outline-2 outline-white md:py-4 py-2 md:px-12 px-4 ms-3 hover:bg-white hover:text-black hover:transition hover:duration-300'>Agregar al carrito</button>
             </div>
             <img src={line} alt="" className='py-5'/>
             <div>
