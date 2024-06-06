@@ -153,9 +153,9 @@ const handleCheck=(e) => {
                         </div>
                     </div>
             </div>
-                <div className={filter?'w-3/4 grid md:grid-cols-2 grid-cols-1 gap-x-24 gap-y-14 pt-14':'grid md:grid-cols-3 grid-cols-2 md:gap-x-24 gap-x-7 md:gap-y-14 gap-y-4 md:pt-14 pt-6'}>
+                <div className={filter?'product-container w-3/4 grid md:grid-cols-2 grid-cols-1 gap-x-24 gap-y-14 pt-14':'product-container grid md:grid-cols-3 grid-cols-2 md:gap-y-14 gap-y-4 md:pt-14 pt-6'}>
             {currentProducts?.map((product, index) => (
-      <div key={index}><Link to={`/products/${index + 1}`}> <img src={product.image} alt="" /></Link></div>
+      <div key={index} className='collection'><Link to={`/products/${index + 1}`}> <img src={product.image} alt="" /></Link></div>
     ))}        
             </div>
             
