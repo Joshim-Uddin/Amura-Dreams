@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import line from "./../assets/Line.png"
 import MayLike from '../Components/MayLike';
+import arrowLeft from "./../assets/left-arrow.png"
 
 const Products = () => {
     const [items, setItems] = useState([])
@@ -24,6 +25,9 @@ const Products = () => {
     
     return (
         <div className='details pb-24'>
+            <div className='back md:w-8 md:h-8 w-4 h-4 ml-5'>
+            <Link to="/colección"><img src={arrowLeft} alt="" className='w-full h-full' /></Link>
+            </div>
         <div className='details-container flex md:flex-row flex-col text-white'>
 
             <div className='flex md:flex-row flex-col-reverse gap-4 md:max-h-[575px] 2xl:max-h-[675px]'>

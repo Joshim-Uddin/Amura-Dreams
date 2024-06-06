@@ -149,6 +149,10 @@ padding-bottom: 1rem;
 .details{
   background: linear-gradient(119deg, #232323 16.52%, #313131 28.62%, rgba(68, 68, 68, 0.99) 46.67%, #707070 63.8%, rgba(104, 103, 103, 0.77) 71.65%, rgba(82, 80, 80, 0.50) 82.02%);
   /* padding: 5rem 8rem 9rem 6rem; */
+    padding-top: 2rem;
+  }
+.back{
+  margin-left: 2rem;
 }
 /* Footer section */
 .footer{
@@ -267,8 +271,14 @@ text-transform: capitalize;
       column-gap: 1.75rem !important;
     }
     .details-container {
-      padding: 5rem 1rem 9rem;
+      padding: 3rem 1rem 3rem;
       gap: 3.5rem !important;
+  }
+  .details{
+    padding-top: 2rem;
+  }
+  .back{
+    margin-left: 1rem;
   }
     
 }
